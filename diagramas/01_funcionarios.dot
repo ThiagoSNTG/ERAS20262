@@ -1,0 +1,18 @@
+digraph UML {
+  graph [rankdir=LR, bgcolor="white", pad="0.4", nodesep="0.75", ranksep="1.0"];
+  node [shape=plain, fontname="Arial"];
+  edge [fontname="Arial", fontsize=11, color="#6d1d20", penwidth=1.6];
+  Sistema [label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8" COLOR="#6d1d20">
+    <TR><TD BGCOLOR="#6d1d20"><FONT COLOR="white"><B>SistemaFuncionarios</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT">- funcionarios: list<BR ALIGN="LEFT"/>- limite: int = 100</TD></TR>
+    <HR/><TR><TD ALIGN="LEFT">+ adicionar_funcionario(nome, cargo, salario)<BR ALIGN="LEFT"/>+ listar_funcionarios()<BR ALIGN="LEFT"/>+ buscar_funcionario(nome)</TD></TR>
+    </TABLE>>];
+  Funcionario [label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8" COLOR="#6d1d20">
+    <TR><TD BGCOLOR="#6d1d20"><FONT COLOR="white"><B>Funcionario</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT">+ nome: str<BR ALIGN="LEFT"/>+ cargo: str<BR ALIGN="LEFT"/>+ salario: float</TD></TR>
+    <HR/><TR><TD ALIGN="LEFT">+ __init__(nome, cargo, salario)</TD></TR>
+    </TABLE>>];
+  Sistema -> Funcionario [arrowhead=diamond, dir=back, headlabel="0..100", taillabel="1"];
+}

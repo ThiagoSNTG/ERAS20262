@@ -1,0 +1,18 @@
+digraph UML {
+  graph [rankdir=LR, bgcolor="white", pad="0.4", nodesep="0.7", ranksep="1.0"];
+  node [shape=plain, fontname="Arial"];
+  edge [fontname="Arial", fontsize=11, color="#6d1d20", penwidth=1.6];
+  Turma [label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8" COLOR="#6d1d20">
+    <TR><TD BGCOLOR="#6d1d20"><FONT COLOR="white"><B>Turma</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT">- alunos: list<BR ALIGN="LEFT"/>- quantidade: int = 5</TD></TR>
+    <HR/><TR><TD ALIGN="LEFT">+ __init__()<BR ALIGN="LEFT"/>+ cadastrar_aluno(nome, nota)<BR ALIGN="LEFT"/>+ calcular_media()</TD></TR>
+    </TABLE>>];
+  Aluno [label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="8" COLOR="#6d1d20">
+    <TR><TD BGCOLOR="#6d1d20"><FONT COLOR="white"><B>Aluno</B></FONT></TD></TR>
+    <TR><TD ALIGN="LEFT">+ nome: str<BR ALIGN="LEFT"/>+ nota: float</TD></TR>
+    <HR/><TR><TD ALIGN="LEFT">+ __init__(nome, nota)</TD></TR>
+    </TABLE>>];
+  Turma -> Aluno [arrowhead=diamond, dir=back, headlabel="0..5", taillabel="1"];
+}
