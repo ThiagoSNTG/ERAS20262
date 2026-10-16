@@ -1,0 +1,35 @@
+ATIVIDADE: MIGRAÇÃO DE ALGORITMOS PARA PYTHON
+
+ORIGEM
+- main.c: Sistema de Funcionários (C)
+- SistemaAlunos.java: Sistema de Alunos (Java)
+- main.cob: Cadastro de 5 Alunos e Média (COBOL)
+- SistemaDeVotacao.java: Sistema de Votação (Java)
+
+ARQUIVOS PARA ENTREGA
+- Documentacao_Migracao_Algoritmos.docx: relatório com requisitos, UML, tabelas e bancos.
+- Documentacao_Migracao_Algoritmos.pdf: cópia para leitura e impressão.
+- codigos/: quatro programas Python independentes.
+- diagramas/: quatro diagramas de classe PNG e seu código DOT editável.
+- banco_de_dados/: quatro exemplos SQL para SQLite (propostas, não ligados aos programas).
+- testes/testar_programas.py: testes automáticos dos quatro programas.
+
+COMO EXECUTAR
+1. Instale o Python 3 (se necessário).
+2. Abra um terminal na pasta 'codigos'.
+3. Execute individualmente um dos seguintes comandos:
+   python 01_funcionarios.py
+   python 02_alunos_java.py
+   python 03_alunos_cobol.py
+   python 04_votacao.py
+
+OBSERVAÇÕES
+- Não são necessárias bibliotecas externas para executar os programas.
+- Os dados são mantidos na memória durante a execução, como nos arquivos originais.
+- Os arquivos .sql demonstram POSSÍVEIS tabelas para futura persistência.
+- Em SistemaAlunos.java, nomes repetidos permanecem na lista, mas a nota
+  anterior é substituída no dicionário. A versão Python preserva essa lógica.
+- main.cob aceita 5 alunos; a versão Python respeita o total fixo.
+- A votação apenas soma votos e não impede que a mesma pessoa vote novamente,
+  exatamente como o programa original.
+- A migração adiciona mensagens para entradas numéricas inválidas.
