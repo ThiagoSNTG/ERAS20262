@@ -1,6 +1,3 @@
-"""Testes simples dos quatro programas migrados.
-Execute: python testes/testar_programas.py (a partir da pasta de entrega).
-"""
 import importlib.util
 from pathlib import Path
 import sqlite3
@@ -9,7 +6,6 @@ import sys
 import unittest
 
 PASTA = Path(__file__).resolve().parents[1]
-
 
 def carregar(arquivo, nome_modulo):
     caminho = PASTA / 'codigos' / arquivo
@@ -74,7 +70,7 @@ class TestesMigracao(unittest.TestCase):
         self.assertEqual(sistema.votos, [1, 0, 2])
 
     def test_sql_proposto_execucao(self):
-        for caminho in sorted((PASTA / 'banco_de_dados').glob('*.sql')):
+        for caminho in sorted((PASTA / 'banco de dados').glob('*.sql')):
             with self.subTest(arquivo=caminho.name):
                 with sqlite3.connect(':memory:') as banco:
                     banco.executescript(caminho.read_text(encoding='utf-8'))
